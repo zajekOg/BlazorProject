@@ -1,6 +1,10 @@
-﻿<Router AppAssembly="typeof(Program).Assembly">
+﻿@inject AuthenticationStateProvider AuthenticationStateProvider
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="routeData" DefaultLayout="typeof(Components.MainLayout)" />
-        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    <CascadingValue Value="AuthenticationStateProvider">
+    </CascadingValue>
     </Found>
 </Router>
+
+

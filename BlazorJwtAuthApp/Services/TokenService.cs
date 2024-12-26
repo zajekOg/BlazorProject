@@ -20,8 +20,8 @@ public class TokenService
         };
 
         var token = new JwtSecurityToken(
-            issuer: "yourapp",
-            audience: "yourapp",
+            issuer: "BlazorJwtAuthApp",
+            audience: "BlazorJwtAuthApp",
             claims: claims,
             expires: DateTime.Now.AddMinutes(TokenExpiryInMinutes),
             signingCredentials: creds);

@@ -1,3 +1,8 @@
-﻿@attribute [Authorize]
-<h3>Профиль</h3>
-<p>Добро пожаловать, @context.User.Identity.Name!</p>
+﻿<AuthorizeView>
+    <Authorized>
+        <p>Добро пожаловать, @context.User.Identity.Name!</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>Вы не авторизованы. Пожалуйста, войдите в систему.</p>
+    </NotAuthorized>
+</AuthorizeView>
